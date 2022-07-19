@@ -22,6 +22,36 @@ function playSound(sound) {
 }
 
 
+play.addEventListener('click', playSequence)
+
+function playSequence(sound) {
+    let play = document.getElementById('play');
+    console.log(play)
+    
+    function sequence() {
+    let sound = document.getElementById('input').value;
+    console.log(sound)
+
+     
+    if (sound != ''){
+        let array = [];
+        array = sound.split('');
+       console.log(array) 
+    }
+}
+function playDrum(array) {
+    let wait = 0;
+    
+    setTimeout(() => {
+     let i=0;i < array.length; i++;
+    wait += 250;   
+    }, 300);
+    
+}
+
+}
+
+
 
 
 const year = document.getElementById('year');
