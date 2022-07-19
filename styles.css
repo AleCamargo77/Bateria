@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Roboto:ital,wght@0,400;1,100&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 6rem;
+    margin-bottom: 2rem;   
+    text-shadow: 5px 5px 10px;
+}
+
+
+.line-drums {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+
+.line-drums button {
+    color: #fff;
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 5rem;
+    border: 1px solid #fff; 
+}
+
+.key.active  {
+    color: yellow;
+    border: 2px solid yellow;
+} 
+
+.play-drums {
+    display: flex;
+    flex-direction: column;
+    max-width: 16rem;
+    margin: 0 auto;
+}
+
+.input-play {
+    height: 2rem;
+    background-color: #fff;
+    border: none;
+    margin-bottom: .5rem;
+}
+
+.input-play::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-play {
+    color: #fff;
+    border: 1px solid #fff;
+    height: 2rem;   
+}
+
+.footer-content {
+    color: #fff;
+    text-align: center;
+    margin-top: 5rem;
+
+}

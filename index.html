@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./scripts.js"></script>
+    <title>Bateria</title>
+</head>
+
+<body>
+    <header class="title">
+        <h1>Bateria</h1>
+    </header>
+    <section>
+        <div class="line-drums">
+            <button class="key" data-key="keyw">W</button>
+            <button class="key" data-key="keye">E</button>
+            <button class="key" data-key="keyr">R</button>
+        </div>
+        <div class="line-drums">
+            <button class="key" data-key="keys">S</button>
+            <button class="key" data-key="keyd">D</button>
+            <button class="key" data-key="keyf">F</button>
+        </div>
+        <div class="line-drums">
+            <button class="key" data-key="keyx">X</button>
+            <button class="key" data-key="keyc">C</button>
+            <button class="key" data-key="keyv">V</button>
+        </div>
+        <div class="play-drums">
+            <input class="input-play" type="text" placeholder="Faça sua composição">
+            <button class="btn-play">Tocar</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>© Copyright <span id="year"></span> | Desenvolvido por <strong>Alessandro Camargo</strong></p>
+        </div>
+    </footer>
+
+    <audio id="s_keyw" src="./sounds/keyw.wav"></audio>
+    <audio id="s_keye" src="./sounds/keye.wav"></audio>
+    <audio id="s_keyr" src="./sounds/keyr.wav"></audio>
+    <audio id="s_keys" src="./sounds/keys.wav"></audio>
+    <audio id="s_keyd" src="./sounds/keyd.wav"></audio>
+    <audio id="s_keyf" src="./sounds/keyf.wav"></audio>
+    <audio id="s_keyx" src="./sounds/keyx.wav"></audio>
+    <audio id="s_keyc" src="./sounds/keyc.wav"></audio>
+    <audio id="s_keyv" src="./sounds/keyv.wav"></audio>
+
+</body>
+
+</html>
