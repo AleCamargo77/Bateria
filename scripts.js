@@ -1,5 +1,17 @@
-document.body.addEventListener('keyup', (event)=> {
-    playSound((event.code.toLocaleLowerCase()));
+document.body.addEventListener('keyup', (event) => {
+    playSound((event.code.toLowerCase()));
+})
+
+document.getElementById('play').addEventListener('click', () => {
+    let song = document.getElementById('input').value;
+    console.log(song);
+
+    if (song != '') {
+        let array = [];
+        array = song.split('');
+        playSequence(array);
+        console.log(array)
+    }
 })
 
 function playSound(sound) {
@@ -7,55 +19,31 @@ function playSound(sound) {
     let audioKey = document.querySelector(`button[data-key="${sound}"]`);
     console.log(audioKey)
 
-    if(audioElement) {
+    if (audioElement) {
         audioElement.currentTime = 0;
         audioElement.play();
     }
 
-    if(audioKey) {
+    if (audioKey) {
         audioKey.classList.add('active');
         setTimeout(() => {
             audioKey.classList.remove('active');
         }, 300);
-        
     }
 }
 
-
-play.addEventListener('click', playSequence)
-
-function playSequence(sound) {
-    let play = document.getElementById('play');
-    console.log(play)
-    
-    function sequence() {
-    let sound = document.getElementById('input').value;
-    console.log(sound)
-
-     
-    if (sound != ''){
-        let array = [];
-        array = sound.split('');
-       console.log(array) 
-    }
-}
-function playDrum(array) {
+function playSequence(array) {
     let wait = 0;
-    
-    setTimeout(() => {
-     let i=0;i < array.length; i++;
-    wait += 250;   
-    }, 300);
-    
+
+    for (let soundItem of array) {
+        setTimeout(() => {
+            playSound(`key${soundItem}`);
+        }, wait);
+
+        wait += 250;
+    }
 }
-
-}
-
-
-
 
 const year = document.getElementById('year');
 const date = new Date();
 year.innerHTML = date.getFullYear();
-
-
